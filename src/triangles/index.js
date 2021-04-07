@@ -1,5 +1,7 @@
 import GLProgram from '../gl-program/index.js';
 import { hexToRgb } from '../helpers.js';
+import vertexSource from './shaders/vertex.glsl';
+import fragmentSource from './shaders/fragment.glsl';
 
 export default class Triangles extends GLProgram {
 	constructor(gl) {
@@ -15,11 +17,8 @@ export default class Triangles extends GLProgram {
 		]);
 	}
 
-	async createProgram() {
-		await super.createProgram(
-			'./src/triangles/shaders/vertex.glsl',
-			'./src/triangles/shaders/fragment.glsl'
-		);
+	createProgram() {
+		super.createProgram(vertexSource, fragmentSource);
 	}
 
 	setupAttributes() {

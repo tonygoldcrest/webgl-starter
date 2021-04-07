@@ -1,3 +1,4 @@
+import Stats from 'stats.js';
 import { resizeCanvasToDisplaySize, hexToRgb } from './helpers.js';
 import Triangles from './triangles/index.js';
 
@@ -31,8 +32,6 @@ class Game {
 			backgroundColorRgb.b,
 			1.0
 		);
-
-		await this.triangles.loading;
 
 		this.draw();
 	}

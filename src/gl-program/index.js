@@ -7,32 +7,25 @@ export default class GLProgram {
 		this.attributes = {};
 		this.uniforms = {};
 
-		this.loading = this.setup();
+		this.setup();
 	}
 
-	async setup() {
-		await this.createProgram();
+	setup() {
+		this.createProgram();
 		this.setupAttributes();
 		this.setupUniforms();
 	}
 
-	async createProgram(vertexUrl, fragmentUrl) {
-		const vertexShaderSource = await fetch(vertexUrl).then((response) =>
-			response.text()
-		);
-		const fragmentShaderSource = await fetch(fragmentUrl).then((response) =>
-			response.text()
-		);
-
+	createProgram(vertexSource, fragmentSource) {
 		const vertexShader = createShader(
 			this.gl,
 			this.gl.VERTEX_SHADER,
-			vertexShaderSource
+			vertexSource
 		);
 		const fragmentShader = createShader(
 			this.gl,
 			this.gl.FRAGMENT_SHADER,
-			fragmentShaderSource
+			fragmentSource
 		);
 
 		this.program = createProgram(this.gl, vertexShader, fragmentShader);
