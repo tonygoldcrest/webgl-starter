@@ -1,4 +1,4 @@
-import { createShader, createProgram } from '../helpers.js';
+import { createShader, createProgram } from '../helpers';
 
 export default class GLProgram {
 	constructor(gl) {

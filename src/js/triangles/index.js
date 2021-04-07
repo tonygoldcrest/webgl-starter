@@ -1,5 +1,5 @@
-import GLProgram from '../gl-program/index.js';
-import { hexToRgb } from '../helpers.js';
+import GLProgram from '../gl-program';
+import { hexToRgb } from '../helpers';
 import vertexSource from './shaders/vertex.glsl';
 import fragmentSource from './shaders/fragment.glsl';
 

@@ -22,7 +22,7 @@ module.exports = {
 		extensions: ['.glsl', '.js'],
 	},
 	entry: {
-		index: path.resolve(__dirname, 'src', 'index.js'),
+		index: path.resolve(__dirname, 'src', 'js', 'index.js'),
 	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),

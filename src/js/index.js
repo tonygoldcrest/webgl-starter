@@ -1,6 +1,6 @@
 import Stats from 'stats.js';
-import { resizeCanvasToDisplaySize, hexToRgb } from './helpers.js';
-import Triangles from './triangles/index.js';
+import { resizeCanvasToDisplaySize, hexToRgb } from './helpers';
+import Triangles from './triangles';
 
 class Game {
 	constructor() {
